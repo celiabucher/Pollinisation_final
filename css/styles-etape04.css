@@ -1,0 +1,168 @@
+/*GENERAL*/
+body{
+    margin: 0;
+    font-family: K2D, sans-serif;
+    background-color: #C4F1FB;
+}
+p{
+  font-family: Libre Franklin, sans-serif;
+  font-size: 1.0rem;
+  width: 50vh;
+  color:#1A325D;
+}
+/*FIN GENERAL*/
+
+/*LANDING PAGE*/
+.accueil {
+min-height: 110vh;
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-around;
+background: url('../img/retour-ruche.png') top center no-repeat;
+background-size: cover;
+}
+/*HEADER*/
+header{
+  background-color: #1A325D;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+
+}
+ul{
+ font-style: K2D, sans-serif;
+ list-style: none;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ margin-top: 0;
+
+}
+li a{
+  text-decoration: none;
+  color: #fff;
+}
+li a:hover{
+  color:#5D92F2;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li{
+  margin-top: 0.5%;
+}
+li.uppercase{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-top: 0.2%;
+  line-height: 12pt;
+}
+/*FIN HEADER*/
+
+
+p.intro{
+  text-align: center;
+  color: #1A325D;
+  font-family: K2D;
+  font-size: 1.4rem;
+}
+h1{
+  color: #1A325D;
+  font-size: 4rem;
+  text-align: center;
+}
+h2{
+  font-size: 2rem;
+  color:#1A325D;
+}
+div.texte-1{
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+ height: 50%;
+}
+div.texte-2{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  height: 60vh;
+}
+
+/*img.abeille{
+  display: flex;
+  min-width: 40%;
+  flex-grow: 2;
+  bottom: 50%;
+  width: 40%;
+  height: 40%;
+  margin-right: 10%;
+}*/
+.ruche{
+  top:0;
+  bottom: 50%;
+  height: 60%;
+  width: 100%;
+}
+
+div.block{
+  justify-content: space-between;
+  display: flex;
+  width: 50%;
+  margin-left: 20%;
+}
+input{
+  background-color:#1A325D;
+  text-decoration: none;
+  border: none;
+  height: 5%;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 5%;
+  float: right;
+}
+input:hover{
+  background-color:#5D92F2;
+  cursor: pointer;
+  border-radius: 50px;
+}
+div.block2{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+/*FIN LANDING PAGE*/
+
+@media screen and (min-width: 400px) and (max-width: 775px) {
+  div.texte-1, div.texte-2 {
+    width: 90% !important; /* Commentaire : on agrandit la zone */
+    flex-direction: column; /* Commentaire : Ici, c'est pour mettre l'image au-dessus/en-dessous du texte */
+  }
+  .ruche {
+    width: 40%; /* On garde une taille précise pour l'illustration */
+    height: 40%; /* Pareil ici */
+    display: block;
+    margin: auto; /* Pour centrer l'abeille */
+  }
+  .texte-bis {
+    margin-top: 100px; /* Pour espacer le bloc de l'illustration */
+  }
+  p {
+    width: auto; /* Ne donne jamais une largeur à du texte !! Sinon c'est pas responsive */
+    font-size: 20px; /* On agrandit la taille du texte pour que ça soit lisible sur smartphone/tablette */
+    line-height: 30px; /* Et l'interlignage aussi */
+  }
+  div.block2 {
+    display: block;
+    margin: auto; /* pour centrer la vidéo dans son conteneur */
+    width: 90%; /* Comme pour 'div.texte-1' */
+  }
+  .texte-2 video {
+    width: auto; /* Pour que la vidéo soit responsive */
+  }
+}
